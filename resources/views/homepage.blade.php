@@ -35,14 +35,14 @@ $links = ['pagina1', 'pagina2', 'pagina3'];
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>PHP primi passi</title>
-    <link href="{{ asset('style.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href={{ asset('css/style.css')}}>
 </head>
 <body>
     <header>
         <h1>{{$title}}</h1>
         <ul>
             @foreach ($links as $link)
-                <li><a href="{{ '/'.$link }}"> {{ $link }}</a></li>
+                <li><a href="{{ '/' . $link }}"> {{ 'Vai alla ' . $link }}</a></li>
             @endforeach
         </ul>
 
